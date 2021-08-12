@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity()
  * @ORM\Table(name="app_supplier")
  */
-class Supplier
+class Supplier implements SupplierInterface
 {
     /**
      * @var int
@@ -36,32 +36,30 @@ class Supplier
    private $email;
     
 
-   public function getId()
+   public function getId(): int
    {
       return $this->id;
    }
 
-   public function getName()
+   public function getName(): string
    {
       return $this->name;
    }
  
-   public function setName(string $name)
+   public function setName(string $name): void
    {
       $this->name = $name;
-
-      return $this;
+  
    }
  
-   public function getEmail()
+   public function getEmail(): string
    {
       return $this->email;
    }
   
-   public function setEmail(string $email)
+   public function setEmail(string $email): void
    {
       $this->email = $email;
 
-      return $this;
    }
 }

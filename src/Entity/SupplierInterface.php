@@ -4,20 +4,14 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+use Sylius\Component\Resource\Model\ResourceInterface;
 
-/**
- * @ORM\Entity()
- * @ORM\Table(name="app_supplier")
- */
-interface SupplierInterface
+interface SupplierInterface extends ResourceInterface
 {
-    public function getId(): int;
-
     public function getName(): string;
     public function setName(string $name): void;
 
     public function getEmail(): string;
     public function setEmail(string $email): void;
-
 
 }
