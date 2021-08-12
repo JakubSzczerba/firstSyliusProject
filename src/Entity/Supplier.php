@@ -36,7 +36,7 @@ class Supplier implements SupplierInterface
    private $email;
     
 
-   public function getId(): int
+   public function getId(): ?int
    {
       return $this->id;
    }
