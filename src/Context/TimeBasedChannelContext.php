@@ -7,9 +7,14 @@ namespace App\Context;
 final class TimeBasedChannelContext implements ChannelContextInterface
 {
 
+    /**
+     * @var ChannelRepositoryInterface
+     */
+    private $channelRepository;
+
     public function getChannel(): ChannelInterface
     {
-        
+
     }
 
 }
