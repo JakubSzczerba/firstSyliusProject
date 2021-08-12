@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Supplier implements SupplierInterface
 {
     /**
-     * @var int
+     * @var int|null
      * 
      * @ORM\Column(type="integer")
      * @ORM\Id
@@ -22,14 +22,14 @@ class Supplier implements SupplierInterface
    private $id;
 
    /**
-    * @var string
+    * @var string|null
     * 
     * @ORM\Column(type="string")
     */
    private $name;
 
    /**
-    * @var string
+    * @var string|null
     * 
     * @ORM\Column(type="string")
     */
@@ -41,23 +41,23 @@ class Supplier implements SupplierInterface
       return $this->id;
    }
 
-   public function getName(): string
+   public function getName(): ?string
    {
       return $this->name;
    }
  
-   public function setName(string $name): void
+   public function setName(?string $name): void
    {
       $this->name = $name;
   
    }
  
-   public function getEmail(): string
+   public function getEmail(): ?string
    {
       return $this->email;
    }
   
-   public function setEmail(string $email): void
+   public function setEmail(?string $email): void
    {
       $this->email = $email;
 
