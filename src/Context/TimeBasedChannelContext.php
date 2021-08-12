@@ -33,4 +33,11 @@ final class TimeBasedChannelContext implements ChannelContextInterface
 
     }
 
+    private function isNight(): bool
+    {
+        $currentHour = (int) ( new \DateTime() )->format('H');
+
+        return $currentHour > 19 || $currentHour < 6;
+    }
+
 } 
