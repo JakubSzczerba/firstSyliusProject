@@ -29,6 +29,8 @@ final class TimeBasedChannelContext implements ChannelContextInterface
             return $this->channelRepository->findOneByCode('NIGHT');
         }
 
+        return $this->channelRepository->findOneBy([]);
+
     }
 
 } 
