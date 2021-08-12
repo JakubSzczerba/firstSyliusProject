@@ -17,6 +17,12 @@ final class TimeBasedChannelContext implements ChannelContextInterface
      */
     private $channelRepository;
 
+    public function __construct(ChannelRepositoryInterface $channelRepository)
+    {
+        $this->channelRepository = $channelRepository;
+
+    }
+
     public function getChannel(): ChannelInterface
     {
 
