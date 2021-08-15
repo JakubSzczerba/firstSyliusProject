@@ -31,6 +31,7 @@ sylius_grid:
           trust:
             type: apply_transition
             label: app.ui.trust
+            icon: star
             options:
               link:
                 route: app_admin_supplier_trust
@@ -38,3 +39,4 @@ sylius_grid:
                   id: resource.id
               transition: trust
               graph: app_supplier
+              class: yellow
