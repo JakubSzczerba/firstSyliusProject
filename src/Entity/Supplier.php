@@ -69,4 +69,16 @@ class Supplier implements SupplierInterface
       $this->email = $email;
 
    }
+
+   
+    public function getState(): string
+    {
+        return $this->state;
+    }
+
+    
+    public function setState(string $state):void 
+    {
+        $this->state = $state;
+    }
 }
