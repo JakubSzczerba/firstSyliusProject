@@ -13,8 +13,10 @@ sylius_grid:
           type: string
           label: sylius.ui.email
         state:
-          type: string
+          type: twig
           label: sylius.ui.state
+          options: 
+            template: "Supplier/Grid/state.html.twig"
 
       actions:
         main:
