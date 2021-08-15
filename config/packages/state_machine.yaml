@@ -4,11 +4,10 @@ winzou_state_machine:
     property_path: state
     graph: app_supplier
     state_machine_class: "%sylius.state_machine.class%"
-  states:
-    new: ~
-    trusted: ~
+    states:
+      new: ~
+      trusted: ~
     transitions:
-    trust:
-      form: [new]
-      to: trusted
-      
+      trust:
+        from: [new]
+        to: trusted
