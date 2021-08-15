@@ -12,6 +12,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Supplier implements SupplierInterface
 {
+   public const STATE_NEW = 'new';
+   public const STATE_TRUSTED = 'trusted';
+
+
     /**
      * @var int|null
      * 
@@ -40,7 +44,7 @@ class Supplier implements SupplierInterface
     * 
     * @ORM\Column(type="string")
     */
-    private $state = 'new';
+    private $state = self::STATE_NEW;
     
 
    public function getId(): ?int
