@@ -34,6 +34,13 @@ class Supplier implements SupplierInterface
     * @ORM\Column(type="string")
     */
    private $email;
+
+   /**
+    * @var string|null
+    * 
+    * @ORM\Column(type="string")
+    */
+    private $state;
     
 
    public function getId(): ?int
