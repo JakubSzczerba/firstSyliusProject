@@ -64,6 +64,6 @@ services:
             - '%app.model.supplier.class%'
 
     App\Notifier\SupplierTrustingNotifierInterface:
-        class: App\Notifier\LogSupplierTrustingNotifier
+        class: App\Notifier\EmailSupplierTrustingNotifier
         public: true
             
