@@ -62,4 +62,8 @@ services:
     App\Form\Type\SupplierType:
         arguments:
             - '%app.model.supplier.class%'
+
+    App\Notifier\SupplierTrustingNotifierInterface:
+        class: App\Notifier\LogSupplierTrustingNotifier
+        public: true
             
