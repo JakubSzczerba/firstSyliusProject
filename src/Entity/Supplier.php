@@ -93,4 +93,11 @@ class Supplier implements SupplierInterface
     {
         $this->state = $state;
     }
+
+    public function getProducts(): Collection
+    {
+        return $this->products;
+    }
+
+    
 }
