@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use Sylius\Component\Resource\Model\ResourceInterface;
+use Doctrine\Common\Collections\Collection;
 
 interface SupplierInterface extends ResourceInterface
 {
