@@ -19,6 +19,7 @@ interface SupplierInterface extends ResourceInterface
     public function setState(string $state):void;
 
     public function getProducts(): Collection;
+    public function countProducts(): int;
     
 
 }

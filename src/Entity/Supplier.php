@@ -99,5 +99,10 @@ class Supplier implements SupplierInterface
         return $this->products;
     }
 
+    public function countProducts(): int
+    {
+       return $this->products->count();
+    }
+
     
 }
