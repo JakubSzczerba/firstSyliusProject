@@ -16,24 +16,24 @@ use Sylius\Component\Product\Model\ProductTranslationInterface;
 class Product extends BaseProduct
 {
     /**
-     * @var SupplierInterface
+     * @var SupplierInterface|null
      * 
      * @ORM\ManyToOne(targetEntity="App\Entity\Supplier", inversedBy="products")
      * @ORM\JoinColumn(name="supplier_id", referencedColumnName="id")
      */
     private $supplier;
 
-    public function getSupplier(): SupplierInterface
+    public function getSupplier(): ?SupplierInterface
     {
         return $this->supplier;
     }
 
-    public function setSupplier(SupplierInterface $supplier): void
+    public function setSupplier(?SupplierInterface $supplier): void
     {
         $this->supplier = $supplier;
     }
     
-    
+
 
     protected function createTranslation(): ProductTranslationInterface
     {
