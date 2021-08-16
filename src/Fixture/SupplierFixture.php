@@ -4,25 +4,27 @@ declare(strict_types=1);
 
 namespace App\Fixture;
 
+use App\Entity\Supplier;
 use Faker\Generator;
 use Doctrine\Common\Persistence\ObjectManager;
 use Sylius\Bundle\FixturesBundle\Fixture\AbstractFixture;
 use Sylius\Bundle\FixturesBundle\Fixture\FixtureInterface;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Sylius\Component\Resource\Factory\FactoryInterface;
+use Doctrine\ORM\EntityManagerInterface;
 
 final class SupplierFixture extends AbstractFixture implements FixtureInterface
 {
     /** @var FactoryInterface */
     private $supplierFactory;
 
-    /** @var ObjectManager */
+    /** @var EntityManagerInterface */          // objectmanager need to change to entitymanager interface.
     private $supplierManager;
 
     /** @var Generator */
     private $generator;
 
-    public function __construct(FactoryInterface $supplierFactory, ObjectManager $supplierManager, Generator $generator)
+    public function __construct(FactoryInterface $supplierFactory, EntityManagerInterface $supplierManager, Generator $generator)
     {
         $this->supplierFactory = $supplierFactory;
         $this->supplierManager = $supplierManager;
