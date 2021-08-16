@@ -22,6 +22,13 @@ final class SupplierFixture extends AbstractFixture implements FixtureInterface
     /** @var Generator */
     private $generator;
 
+    public function __construct(FactoryInterface $supplierFactory, ObjectManager $supplierManager, Generator $generator)
+    {
+        $this->supplierFactory = $supplierFactory;
+        $this->supplierManager = $supplierManager;
+        $this->generator = $generator;
+
+    }
 
     public function load(array $options): void 
     {
