@@ -33,8 +33,15 @@ final class SupplierFixture extends AbstractFixture implements FixtureInterface
     public function load(array $options): void 
     {
         for ($i = 0; $i < $options['count']; $i++) {
+            /** @var SupplierInterface $supplier */
+            $supplier = $this->supplierFactory->createNew();
+            $supplier->setEmail($this->generator->companyEmail);
+            $supplier->setName($this->generator->company);
+            $this->supplierManager->persist($supplier);
 
         }
+
+        $this->supplierManager->flush();
 
     }
 
