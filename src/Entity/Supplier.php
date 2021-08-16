@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * @ORM\Entity()
@@ -45,6 +46,13 @@ class Supplier implements SupplierInterface
     * @ORM\Column(type="string")
     */
     private $state = self::STATE_NEW;
+
+    /**
+     * @var Collection
+     * 
+     * @ORM\OneToMany(targetEntity="App\Entity\Product\Product", mappedBy="supplier")
+     */
+    private $products;
     
 
    public function getId(): ?int
