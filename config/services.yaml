@@ -66,4 +66,11 @@ services:
     App\Notifier\SupplierTrustingNotifierInterface:
         class: App\Notifier\EmailSupplierTrustingNotifier
         public: true
+
+    App\Listener\ReviewCreationListener:
+        arguments:
+            - '@sm.factory'
+        tags:
+            - { name: kernel.event_listener, event: sylius.product_review.pre_create, method: acceptForTrustedAuthor }
+
             
