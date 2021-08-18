@@ -10,7 +10,7 @@ final class Clock implements ClockInterface
     {
         $currentHour = (int) ( new \DateTime() )->format('H');
 
-        return $currentHour > 19 || $currentHour < 6;
+        return $currentHour > 24 || $currentHour < 6;
     }
 
 }

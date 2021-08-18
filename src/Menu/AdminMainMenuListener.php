@@ -16,7 +16,18 @@ final class AdminMainMenuListener
         $configurationMenu
             ->addChild('suppliers', ['route' => 'app_admin_supplier_index'])
             ->setLabel('app.ui.suppliers')
-            ->setLabelAttribute('icon', 'address card outline');
-            
+            ->setLabelAttribute('icon', 'address card outline')
+            ;                  
+    }
+
+    public function addColorsMenu(MenuBuilderEvent $event): void
+    {
+        $configurationMenu = $event->getMenu()->getChild('configuration');
+
+        $configurationMenu
+        ->addChild('colors', ['route' => 'app_admin_colors_index'])
+        ->setLabel('app.ui.colors')
+        ->setLabelAttribute('icon', 'paint brush');  
+
     }
 }

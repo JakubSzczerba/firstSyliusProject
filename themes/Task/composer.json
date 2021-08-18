@@ -1,0 +1,15 @@
+{
+    "name": "sylius/task",
+    "authors": [
+        {
+            "name": "Jakub",
+            "email": "kuba@task.com"
+        }
+    ],
+    "extra": {
+        "sylius-theme": {
+            "title": "Task"
+        }
+    }
+
+}

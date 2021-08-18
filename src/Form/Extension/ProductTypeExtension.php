@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Form\Extension;
 
 use App\Entity\Supplier;
+use App\Entity\Colors;
 use Sylius\Bundle\ProductBundle\Form\Type\ProductType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractTypeExtension;
@@ -20,7 +21,13 @@ class ProductTypeExtension extends AbstractTypeExtension
                 'choice_label' => 'name',
                 'label' => 'app.ui.supplier',
             ])
+            ->add('colors', EntityType::class, [
+                'class' => Colors::class,
+                'choice_label' => 'name',
+                'label' => 'app.ui.colors',
+            ])
             ;
+            
 
     }
 

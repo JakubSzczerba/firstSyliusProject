@@ -5,3 +5,7 @@ sylius_fixtures:
         supplier:
           options:
             count: 10
+        colors:
+          options:
+            count: 1
+
